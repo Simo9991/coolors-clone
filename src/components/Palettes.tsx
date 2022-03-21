@@ -12,12 +12,14 @@ const Palettes: React.FC = (): JSX.Element => {
     (): void;
   }
   const addPal: PalInterface = () => {
-    setCountPalette((c) => c + 1);
-    palette.push({
-      class: "palette",
-      id: countPalette,
-      backGround: randomHex(),
-    });
+    if (countPalette < 10) {
+      setCountPalette((c) => c + 1);
+      palette.push({
+        class: "palette",
+        id: countPalette,
+        backGround: randomHex(),
+      });
+    } 
   };
 
   const removePal: PalInterface = () => {

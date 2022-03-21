@@ -1,0 +1,25 @@
+
+const mouseDown = (e:MouseEvent) => {
+    flags.isDraggable = true;
+    let target = e.target as HTMLDivElement;
+    flags.currentElem = target.parentNode?.parentNode;
+    offset.x = e.clientX - flags.currentElem.offsetLeft; 
+    offset.currentOffset = flags.currentElem.offsetLeft;
+}
+
+
+const moveMe = (fromLeft:any,e: MouseEvent) => {
+
+    if (flags.isDraggable) {    
+        let distanche = flags.currentElem.clientWidth;
+        console.log(distanche);
+        if (flags.currentElem.offsetLeft < offset.currentOffset - 80) {
+                flags.currentElem.previousSibling.style.transform = `translateX(${distanche}px)`;
+                flags.currentElem.parentNode.children[3].style.transition ="0.3s all";
+            }
+
+        flags.currentElem.style.position = "absolute";
+        flags.currentElem.style.zIndex = "999";
+        flags.currentElem.style.left = `${e.clientX - offset.x + "px"}`;
+    }
+}

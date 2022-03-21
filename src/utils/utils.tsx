@@ -1,6 +1,6 @@
 type RandomHex = () => string;
 const randomHex: RandomHex = () => {
-    return ("#" + Math.floor(Math.random() * 0XFFFFF as any).toString(16).padEnd(6, "0")); 
+    return ("#" + Math.floor(Math.random() * 0XFFFFFF as any).toString(16).padEnd(6, "0")); 
 }
 
 interface Palette {
