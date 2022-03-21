@@ -35,8 +35,13 @@ const Palettes: React.FC = (): JSX.Element => {
           <SinglePalette />
         </div>
         <div className="btn-container">
-          <div className='btn-remove' onClick={removePal}>click to remove</div>
-          <div className='btn-add' onClick={addPal}>click to add</div>
+          <div className="btn-remove" onClick={removePal}>
+            click to remove
+          </div>
+          <h1 className='space'>press space to shuffle palette</h1>
+          <div className="btn-add" onClick={addPal}>
+            click to add
+          </div>
         </div>
       </>
     );

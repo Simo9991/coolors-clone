@@ -7,15 +7,21 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     z-index: 99999;
+    background-color: #00124f;
+}
 
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.33);
+.space{
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    top: 50%;
 }
 
 .palette{
@@ -34,11 +40,21 @@
 
 .btn-is-blocked,.btn-not-blocked{
     display: flex;
-    width: 50px;
-    height: 50px;
     background-color: white;
     border-radius: 20px;
     text-align: center;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    height: fit-content;
+    opacity:1;
+}
+
+.btn-is-blocked,.btn-not-blocked:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .btn-remove{
@@ -63,16 +79,76 @@
      display: flex;
     width: 50px;
     height: 50px;
-    background-color: red;
     border-radius: 20px;
     text-align: center;
+    display: flex;
+    transform: scale(0.7);
+    width: fit-content;
+    margin: 10px;
 }
 
 .refTochange{
     display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
+    width: 30px;
+    height: 30px;
     border-radius: 20px;
     text-align: center;
+    background: transparent;
+    border: none;
+}
+
+input[type="color"] {
+    appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  border: 5px solid white;
+}
+
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+::-webkit-color-swatch{
+  border: 0;
+  border-radius: 0;
+  border-radius: 50%;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner{
+  border: 0;
+  border-radius: 50%;
+}
+
+::-moz-focus-inner{
+  padding: 0;
+  border-radius: 50%;
+}
+
+.copyValue {
+    position: absolute;
+    top: 10%;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 100;
+    opacity: 1;
+}
+.copyValue:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.copyToClipBoard{
+    position: absolute;
+    top: 6%;
+    background-color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
 }
