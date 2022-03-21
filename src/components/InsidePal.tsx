@@ -1,10 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
-import { getVisibleOn, getVisibleOff, saveHex } from "../utils/micro-interaction";
+import {
+  getVisibleOn,
+  getVisibleOff,
+  saveHex,
+} from "../utils/micro-interaction";
 interface BG {
-  bg:string
+  bg: string;
 }
 
-const InsidePal: React.FC<BG> = ({bg}) => {
+const InsidePal: React.FC<BG> = ({ bg }) => {
   //drug button
   const refToDrag = useRef<any>(HTMLDivElement);
   const refTochange = useRef<any>(HTMLDivElement);
@@ -12,10 +16,6 @@ const InsidePal: React.FC<BG> = ({bg}) => {
   const currColor = useRef<any>(HTMLDivElement);
   const lock = useRef<any>(HTMLDivElement);
   const copyToClipBoard = useRef<any>(HTMLDivElement);
-
-  
-
-
 
   const [block, setBlock] = useState(false);
   const handleBlock = () => {
@@ -26,7 +26,6 @@ const InsidePal: React.FC<BG> = ({bg}) => {
       lock.current.innerText = "unlocked ";
     }
   };
-
 
   useEffect(() => {
     // refToDrag.current.addEventListener("mousedown", mouseDown);
@@ -44,8 +43,20 @@ const InsidePal: React.FC<BG> = ({bg}) => {
     <>
       <div className="inside-palette">
         {/* initial color label */}
-        <div style={{opacity:0}} ref={copyToClipBoard} className="copyToClipBoard">copy</div>
-        <div onClick={() => saveHex(currColor,copyToClipBoard)} onMouseOver={() => getVisibleOn(copyToClipBoard)} onMouseOut={() => getVisibleOff(copyToClipBoard)} ref={currColor} className="copyValue">
+        <div
+          style={{ opacity: 0 }}
+          ref={copyToClipBoard}
+          className="copyToClipBoard"
+        >
+          copy
+        </div>
+        <div
+          onClick={() => saveHex(currColor, copyToClipBoard)}
+          onMouseOver={() => getVisibleOn(copyToClipBoard)}
+          onMouseOut={() => getVisibleOff(copyToClipBoard)}
+          ref={currColor}
+          className="copyValue"
+        >
           {bg}
         </div>
         {/* initial color label */}
