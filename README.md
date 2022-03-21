@@ -1,6 +1,6 @@
 # coolors-clone 
-    next goals:
-    add drag and drop method between palettes
+    NEXT GOALS:
+    ADD DRAG AND DROP METHOD BETWEEN PALETTES
 
 # Getting Started with Create React App
 
