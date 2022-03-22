@@ -11,6 +11,7 @@ function Header() {
           <Link to="/" className='header_menu_item'>home</Link>
           <Link to="/" className='header_menu_item'>about</Link>
           <Link to="/" className='header_menu_item'>palette</Link>
+          <Link to="/shadow" className='header_menu_item'>shadow</Link>
         </div>
       </header>
     </>

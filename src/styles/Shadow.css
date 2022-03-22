@@ -1,0 +1,85 @@
+.input-container{
+    text-align: center;
+}
+
+.input-container > input {
+    border: none;
+    padding: 10px;
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+    margin: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.input-container > h1 {
+    font-weight: 200;
+
+}
+
+
+.shadow-container{
+    margin-top: 5vh;
+}
+
+.shadow-palette{
+    width: 30%;
+    height: 30vh;
+    float: left;
+    border-radius: 10px;
+    margin: 0.5% 1.5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: relative;
+}
+
+.name-palette{
+    margin: 10px;
+    background: white;
+    width: fit-content;
+    padding: 0px 10px;
+    border-radius: 10px;
+    color: #999999;
+    float: left;
+    z-index: -1;
+    font-size: 1.5rem;
+    pointer-events: none;
+    font-weight: 300;
+}
+
+.families{
+    display: none;
+}
+
+.hex-title{
+    display: inline-block;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%,10px);
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.grid-section{
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 50px;
+    padding: 10px 0px;
+}
+
+.grid-section > img{
+    width: 45%;
+    margin-top: 3px;
+}
+

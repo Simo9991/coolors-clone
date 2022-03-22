@@ -75,16 +75,31 @@
     margin: 0 0 0 auto;
 }
 
+
+.grid-section{
+    display: flex;
+    width: 50px;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    transform: scale(0.7);
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 10px;
+}
+
 .dragMe{
      display: flex;
     width: 50px;
-    height: 50px;
+    height: 40px;
     border-radius: 20px;
     text-align: center;
     display: flex;
     transform: scale(0.7);
     width: fit-content;
     margin: 10px;
+    margin-left: 11px;
 }
 
 .refTochange{
@@ -95,6 +110,7 @@
     text-align: center;
     background: transparent;
     border: none;
+    margin-left: 3px;
 }
 
 input[type="color"] {
